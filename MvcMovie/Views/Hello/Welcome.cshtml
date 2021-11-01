@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Welcome";
+    String name = "小明";
+}
+
+<div>
+    <h1>this is Welcome page.</h1>
+    <div>
+        <p>你好 @name</p>
+        <p>你好@(name)</p>
+        <p>现在的时间是： @DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")</p>
+    </div>
+    <ul>
+        @for (int i = 0; i < (int)ViewData["Count"]; i++)
+        {
+            <li>@ViewData["Message"]</li>
+        }
+    </ul>
+</div>
